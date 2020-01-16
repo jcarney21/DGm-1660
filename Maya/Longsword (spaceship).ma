@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Longsword (spaceship).ma
-//Last modified: Thu, Jan 16, 2020 10:50:24 AM
+//Last modified: Thu, Jan 16, 2020 10:52:46 AM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "865FFAE3-4C0C-2943-AD5E-E892FF1F8D62";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 31.100586572152785 6.4604143729040686 25.826109405007809 ;
-	setAttr ".r" -type "double3" 352.46164725351343 4371.399999995172 -1.2745066106919682e-15 ;
+	setAttr ".t" -type "double3" 30.387263899314597 51.962151662249667 -27.117462000274912 ;
+	setAttr ".r" -type "double3" 309.26164724429634 4450.599999994708 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A9528097-4D2D-BE6F-3FA3-F3B05FD4FB1E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 41.756876877572495;
+	setAttr ".coi" 65.842934332568859;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -84,7 +84,7 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.25 0.125 ;
+	setAttr ".pv" -type "double2" 0.25 0.25 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 122 ".uvst[0].uvsp[0:121]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
@@ -105,7 +105,7 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 16 ".pt";
+	setAttr -s 18 ".pt";
 	setAttr ".pt[68]" -type "float3" -0.68977433 0 0 ;
 	setAttr ".pt[69]" -type "float3" -0.68977433 0 0 ;
 	setAttr ".pt[72]" -type "float3" -0.68977433 0 0 ;
