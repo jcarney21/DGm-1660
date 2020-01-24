@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Pillar of Autumn.ma
-//Last modified: Fri, Jan 24, 2020 01:28:04 PM
+//Last modified: Fri, Jan 24, 2020 01:34:27 PM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "B7557BF5-47BA-E0F8-4C5B-EA81707A9E5C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.8826621901670713 3.1667266633718496 42.188654515868095 ;
+	setAttr ".t" -type "double3" -2.3649861781258221 3.3021830808032888 12.531015616420673 ;
 	setAttr ".r" -type "double3" 0.2616474312521414 4679.0000000010941 7.7662089090225274e-19 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "35919DA3-4EE6-15D6-E6EC-9994BE8EDBB9";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 42.149894109268203;
+	setAttr ".coi" 12.487428230914743;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
