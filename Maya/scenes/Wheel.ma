@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Wheel.ma
-//Last modified: Tue, Feb 04, 2020 11:22:54 AM
+//Last modified: Wed, Feb 05, 2020 10:30:38 PM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "E5B84D2B-4BE4-1049-E5F1-65AC3E7FF05D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.72429292418160651 -0.69597991676171467 12.191236804741674 ;
-	setAttr ".r" -type "double3" 3.2616471976452592 9003.3999999986227 -4.9783794943505042e-17 ;
+	setAttr ".t" -type "double3" -5.1207244183459419 0.085948113969882112 13.623466531464706 ;
+	setAttr ".r" -type "double3" -0.33835280222876996 9339.3999999989483 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DC70AB07-4C0D-D3A4-D058-57AC086B4432";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 12.232548512627968;
+	setAttr ".coi" 14.554313655436248;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -2289,19 +2289,19 @@ createNode mesh -n "WheelShape" -p "Wheel";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B0B7C6C3-44B2-9507-32D4-2182F30920E9";
+	rename -uid "74E10956-490C-5B81-EA21-C3AFDB439B37";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "239F3327-414A-99B8-289A-028E4690B15C";
+	rename -uid "0FB23896-4B98-52F0-7747-1FA1675C652C";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "AC0E325D-494B-3781-9CD9-9BB401E31EE2";
+	rename -uid "B47847BC-49F4-6AFC-8CAC-308013A3E4CC";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "113B6ECE-48C6-A273-C883-54B57D28276B";
+	rename -uid "3E97C50B-44CB-97C2-A409-259531852F2F";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "7179A4E3-454B-F049-AFD0-088EDC0A4176";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "EA276287-47C7-6497-9434-3AA911844F21";
+	rename -uid "863BCCA3-4963-4AAD-8771-90B4F26F268C";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "02D7912A-494B-4123-DFB7-B2BE35E143A6";
 	setAttr ".g" yes;
