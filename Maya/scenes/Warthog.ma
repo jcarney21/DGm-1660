@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Warthog.ma
-//Last modified: Thu, Feb 27, 2020 02:06:59 PM
+//Last modified: Thu, Feb 27, 2020 04:38:41 PM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -15,17 +15,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "A50E68DB-4024-E19E-CD7C-04836777A001";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -9.1430544453680653 20.215604104453377 27.342438067776396 ;
-	setAttr ".r" -type "double3" 694.46164735445041 35208.599999991013 0 ;
+	setAttr ".t" -type "double3" 7.6002285216614514 4.640491926173457 12.720590793566959 ;
+	setAttr ".r" -type "double3" 717.86164731327608 35893.000000000357 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A8EED571-4146-E8DA-746B-4BBD52CDA013";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 35.642202098941823;
+	setAttr ".coi" 15.319750067039179;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 21.337034225463867 4.8497099876403809 17.084754943847656 ;
+	setAttr ".tp" -type "double3" 22.240376472473145 4.0688717365264893 17.196533203125 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -646,8 +646,8 @@ createNode transform -n "WarthogBody";
 createNode mesh -n "WarthogBodyShape" -p "WarthogBody";
 	rename -uid "DBBDB7DF-447D-1847-0BB8-FCB6DFB23EF4";
 	setAttr -k off ".v";
-	setAttr -s 8 ".iog[0].og";
-	setAttr ".iog[0].og[0].gcl" -type "componentList" 21 "f[0:8]" "f[15:18]" "f[20]" "f[22:23]" "f[27:70]" "f[73:117]" "f[128:140]" "f[142:183]" "f[187]" "f[189]" "f[191]" "f[193]" "f[202:205]" "f[207]" "f[215]" "f[221]" "f[223]" "f[228]" "f[230]" "f[238:241]" "f[243:270]";
+	setAttr -s 13 ".iog[0].og";
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 21 "f[0:2]" "f[4:6]" "f[27:30]" "f[33:34]" "f[38:46]" "f[50:56]" "f[65:66]" "f[113:116]" "f[128:140]" "f[142:183]" "f[187]" "f[189]" "f[191]" "f[193]" "f[205]" "f[207]" "f[215]" "f[221]" "f[223]" "f[228]" "f[230]";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 3 "f[121:123]" "f[125:126]" "f[186]";
 	setAttr ".iog[0].og[2].gcl" -type "componentList" 1 "f[184]";
 	setAttr ".iog[0].og[3].gcl" -type "componentList" 2 "f[206]" "f[237]";
@@ -655,6 +655,11 @@ createNode mesh -n "WarthogBodyShape" -p "WarthogBody";
 	setAttr ".iog[0].og[5].gcl" -type "componentList" 7 "f[71:72]" "f[141]" "f[199:200]" "f[208]" "f[213:214]" "f[216]" "f[242]";
 	setAttr ".iog[0].og[6].gcl" -type "componentList" 2 "f[201]" "f[233:236]";
 	setAttr ".iog[0].og[7].gcl" -type "componentList" 6 "f[209:212]" "f[217:220]" "f[222]" "f[224:227]" "f[229]" "f[231:232]";
+	setAttr ".iog[0].og[8].gcl" -type "componentList" 2 "f[238:241]" "f[243:270]";
+	setAttr ".iog[0].og[9].gcl" -type "componentList" 8 "f[3]" "f[7:8]" "f[15:18]" "f[20]" "f[22:23]" "f[67:70]" "f[73:76]" "f[202:204]";
+	setAttr ".iog[0].og[10].gcl" -type "componentList" 8 "f[79:82]" "f[86:89]" "f[93:98]" "f[100]" "f[102:103]" "f[107]" "f[109:110]" "f[117]";
+	setAttr ".iog[0].og[11].gcl" -type "componentList" 9 "f[31:32]" "f[35:37]" "f[47:49]" "f[57:62]" "f[64]" "f[77]" "f[104:106]" "f[108]" "f[111:112]";
+	setAttr ".iog[0].og[12].gcl" -type "componentList" 6 "f[63]" "f[78]" "f[83:85]" "f[90:92]" "f[99]" "f[101]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.5085381418466568 1 ;
@@ -5801,213 +5806,6 @@ createNode mesh -n "ForwardRollcageRShape" -p "ForwardRollcageR";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "nurbsCircle1";
-	rename -uid "DADF4F00-4680-DBF3-294E-0C80E4AE6F7E";
-	setAttr ".rp" -type "double3" 18.430528082097133 4.152780049053006 11.703770190926928 ;
-	setAttr ".sp" -type "double3" 18.430528082097133 4.152780049053006 11.703770190926928 ;
-createNode nurbsCurve -n "nurbsCircleShape1" -p "nurbsCircle1";
-	rename -uid "A559FB3E-4DD9-0DAE-EC6C-668711ED636E";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		18.430528082097133 4.2210352567512537 11.635514983228679
-		18.430528082097133 4.152780049053006 11.607242750497473
-		18.430528082097133 4.0845248413547584 11.635514983228679
-		18.430528082097133 4.0562526086235513 11.703770190926928
-		18.430528082097133 4.0845248413547584 11.772025398625177
-		18.430528082097133 4.152780049053006 11.800297631356383
-		18.430528082097133 4.2210352567512537 11.772025398625177
-		18.430528082097133 4.2493074894824607 11.703770190926928
-		18.430528082097133 4.2210352567512537 11.635514983228679
-		18.430528082097133 4.152780049053006 11.607242750497473
-		18.430528082097133 4.0845248413547584 11.635514983228679
-		;
-createNode transform -n "nurbsCircle2";
-	rename -uid "ECAA7E2D-4173-4259-5816-2182DD5BD7CF";
-	setAttr ".rp" -type "double3" 18.095866240593942 4.152780049053006 11.703770190926928 ;
-	setAttr ".sp" -type "double3" 18.095866240593942 4.152780049053006 11.703770190926928 ;
-createNode nurbsCurve -n "nurbsCircleShape2" -p "nurbsCircle2";
-	rename -uid "B8154A70-40CA-D8A6-2BCC-FFA3C02CC63B";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		18.095866240593942 4.2210352567512537 11.635514983228679
-		18.095866240593942 4.152780049053006 11.607242750497473
-		18.095866240593942 4.0845248413547584 11.635514983228679
-		18.095866240593942 4.0562526086235513 11.703770190926928
-		18.095866240593942 4.0845248413547584 11.772025398625177
-		18.095866240593942 4.152780049053006 11.800297631356383
-		18.095866240593942 4.2210352567512537 11.772025398625177
-		18.095866240593942 4.2493074894824607 11.703770190926928
-		18.095866240593942 4.2210352567512537 11.635514983228679
-		18.095866240593942 4.152780049053006 11.607242750497473
-		18.095866240593942 4.0845248413547584 11.635514983228679
-		;
-createNode transform -n "nurbsCircle3";
-	rename -uid "96CEA109-4A89-A02C-DBFC-9EB1FFE55624";
-	setAttr ".rp" -type "double3" 18.009408860814354 4.2388121556001863 11.737079679752368 ;
-	setAttr ".sp" -type "double3" 18.009408860814354 4.2388121556001863 11.737079679752368 ;
-createNode nurbsCurve -n "nurbsCircleShape3" -p "nurbsCircle3";
-	rename -uid "8C449133-4ED8-E20E-934E-EFB02922BB3A";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		18.0776640685126 4.2388121556001863 11.668824472054119
-		18.009408860814354 4.2388121556001863 11.640552239322913
-		17.941153653116107 4.2388121556001863 11.668824472054119
-		17.912881420384899 4.2388121556001863 11.737079679752368
-		17.941153653116107 4.2388121556001863 11.805334887450616
-		18.009408860814354 4.2388121556001863 11.833607120181822
-		18.0776640685126 4.2388121556001863 11.805334887450616
-		18.105936301243808 4.2388121556001863 11.737079679752368
-		18.0776640685126 4.2388121556001863 11.668824472054119
-		18.009408860814354 4.2388121556001863 11.640552239322913
-		17.941153653116107 4.2388121556001863 11.668824472054119
-		;
-createNode transform -n "nurbsCircle4";
-	rename -uid "5F4B31DE-4DF1-6E00-423E-7E9F65D423C2";
-	setAttr ".rp" -type "double3" 18.009408860814354 4.4457277150234651 11.963980516624103 ;
-	setAttr ".sp" -type "double3" 18.009408860814354 4.4457277150234651 11.963980516624103 ;
-createNode nurbsCurve -n "nurbsCircleShape4" -p "nurbsCircle4";
-	rename -uid "D0A5F691-495A-8732-8E28-4BA51F2536AD";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		18.0776640685126 4.4939914352381924 11.915716796409376
-		18.009408860814354 4.5139829227217128 11.895725308925854
-		17.941153653116107 4.4939914352381924 11.915716796409376
-		17.912881420384899 4.4457277150234651 11.963980516624103
-		17.941153653116107 4.3974639948087377 12.01224423683883
-		18.009408860814354 4.3774725073252174 12.032235724322351
-		18.0776640685126 4.3974639948087377 12.01224423683883
-		18.105936301243808 4.4457277150234651 11.963980516624103
-		18.0776640685126 4.4939914352381924 11.915716796409376
-		18.009408860814354 4.5139829227217128 11.895725308925854
-		17.941153653116107 4.4939914352381924 11.915716796409376
-		;
-createNode transform -n "nurbsCircle5";
-	rename -uid "3E60CE9D-4602-7796-2B66-D48754AFC301";
-	setAttr ".rp" -type "double3" 18.009408860814354 4.4457277150234651 16.91526795895097 ;
-	setAttr ".sp" -type "double3" 18.009408860814354 4.4457277150234651 16.91526795895097 ;
-createNode nurbsCurve -n "nurbsCircleShape5" -p "nurbsCircle5";
-	rename -uid "625407E6-4733-4813-4754-6FA58DDB06BB";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		18.0776640685126 4.5139829227217128 16.91526795895097
-		18.009408860814354 4.5422551554529198 16.91526795895097
-		17.941153653116107 4.5139829227217128 16.91526795895097
-		17.912881420384899 4.4457277150234651 16.91526795895097
-		17.941153653116107 4.3774725073252174 16.91526795895097
-		18.009408860814354 4.3492002745940104 16.91526795895097
-		18.0776640685126 4.3774725073252174 16.91526795895097
-		18.105936301243808 4.4457277150234651 16.91526795895097
-		18.0776640685126 4.5139829227217128 16.91526795895097
-		18.009408860814354 4.5422551554529198 16.91526795895097
-		17.941153653116107 4.5139829227217128 16.91526795895097
-		;
-createNode transform -n "nurbsCircle6";
-	rename -uid "0456BABB-44DC-98ED-03FD-6B92E14A340B";
-	setAttr ".rp" -type "double3" 18.121656590277599 4.4457277150234651 17.012998788531672 ;
-	setAttr ".sp" -type "double3" 18.121656590277599 4.4457277150234651 17.012998788531672 ;
-createNode nurbsCurve -n "nurbsCircleShape6" -p "nurbsCircle6";
-	rename -uid "21A74481-4B80-9B89-B504-DE90F3E494CB";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		18.121656590277599 4.5139829227217128 16.944743580833425
-		18.121656590277599 4.5422551554529198 17.012998788531672
-		18.121656590277599 4.5139829227217128 17.081253996229918
-		18.121656590277599 4.4457277150234651 17.109526228961126
-		18.121656590277599 4.3774725073252174 17.081253996229918
-		18.121656590277599 4.3492002745940104 17.012998788531672
-		18.121656590277599 4.3774725073252174 16.944743580833425
-		18.121656590277599 4.4457277150234651 16.916471348102217
-		18.121656590277599 4.5139829227217128 16.944743580833425
-		18.121656590277599 4.5422551554529198 17.012998788531672
-		18.121656590277599 4.5139829227217128 17.081253996229918
-		;
-createNode transform -n "nurbsCircle7";
-	rename -uid "E501BABF-4CDD-CF19-CB76-F4B51C18D881";
-	setAttr ".rp" -type "double3" 18.84474227814902 4.4457277150234651 17.012998788531672 ;
-	setAttr ".sp" -type "double3" 18.84474227814902 4.4457277150234651 17.012998788531672 ;
-createNode nurbsCurve -n "nurbsCircleShape7" -p "nurbsCircle7";
-	rename -uid "1C8DA2B8-4015-1637-3708-979C65C19DB4";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		18.84474227814902 4.5139829227217128 16.944743580833425
-		18.84474227814902 4.5422551554529198 17.012998788531672
-		18.84474227814902 4.5139829227217128 17.081253996229918
-		18.84474227814902 4.4457277150234651 17.109526228961126
-		18.84474227814902 4.3774725073252174 17.081253996229918
-		18.84474227814902 4.3492002745940104 17.012998788531672
-		18.84474227814902 4.3774725073252174 16.944743580833425
-		18.84474227814902 4.4457277150234651 16.916471348102217
-		18.84474227814902 4.5139829227217128 16.944743580833425
-		18.84474227814902 4.5422551554529198 17.012998788531672
-		18.84474227814902 4.5139829227217128 17.081253996229918
-		;
-createNode transform -n "nurbsCircle8";
-	rename -uid "75373101-4589-855A-D4B0-24BCF5043FB3";
-	setAttr ".rp" -type "double3" 18.926511947925498 4.4457277150234651 16.931740164979804 ;
-	setAttr ".sp" -type "double3" 18.926511947925498 4.4457277150234651 16.931740164979804 ;
-createNode nurbsCurve -n "nurbsCircleShape8" -p "nurbsCircle8";
-	rename -uid "52ED6318-45FD-3920-3375-E7B613C39E19";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		18.858256740227251 4.5139829227217128 16.931740164979804
-		18.926511947925498 4.5422551554529198 16.931740164979804
-		18.994767155623745 4.5139829227217128 16.931740164979804
-		19.023039388354952 4.4457277150234651 16.931740164979804
-		18.994767155623745 4.3774725073252174 16.931740164979804
-		18.926511947925498 4.3492002745940104 16.931740164979804
-		18.858256740227251 4.3774725073252174 16.931740164979804
-		18.829984507496043 4.4457277150234651 16.931740164979804
-		18.858256740227251 4.5139829227217128 16.931740164979804
-		18.926511947925498 4.5422551554529198 16.931740164979804
-		18.994767155623745 4.5139829227217128 16.931740164979804
-		;
-createNode transform -n "nurbsCircle9";
-	rename -uid "B1915341-4958-D438-181C-E69FB68514FB";
-	setAttr ".rp" -type "double3" 18.926511947925498 4.4457277150234651 16.769080510535794 ;
-	setAttr ".sp" -type "double3" 18.926511947925498 4.4457277150234651 16.769080510535794 ;
-createNode nurbsCurve -n "nurbsCircleShape9" -p "nurbsCircle9";
-	rename -uid "86340C39-45F3-1EBB-DBE2-1B9985A641C2";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		18.858256740227251 4.5139829227217128 16.769080510535794
-		18.926511947925498 4.5422551554529198 16.769080510535794
-		18.994767155623745 4.5139829227217128 16.769080510535794
-		19.023039388354952 4.4457277150234651 16.769080510535794
-		18.994767155623745 4.3774725073252174 16.769080510535794
-		18.926511947925498 4.3492002745940104 16.769080510535794
-		18.858256740227251 4.3774725073252174 16.769080510535794
-		18.829984507496043 4.4457277150234651 16.769080510535794
-		18.858256740227251 4.5139829227217128 16.769080510535794
-		18.926511947925498 4.5422551554529198 16.769080510535794
-		18.994767155623745 4.5139829227217128 16.769080510535794
-		;
 createNode transform -n "RearRollcageL";
 	rename -uid "A7E4D55F-4618-8199-7F49-2EB410B2C09C";
 	setAttr ".rp" -type "double3" 18.467960357666016 4.2992539405822754 14.358384132385254 ;
@@ -7533,98 +7331,6 @@ createNode mesh -n "RearRollcageRShape" -p "RearRollcageR";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "nurbsCircle10";
-	rename -uid "F06BCE25-4BCB-3277-4CFF-1EB0F8D7002E";
-	setAttr ".rp" -type "double3" 21.753339664307411 6.9302417043028486 8.6433978149400001 ;
-	setAttr ".sp" -type "double3" 21.753339664307411 6.9302417043028486 8.6433978149400001 ;
-createNode nurbsCurve -n "nurbsCircleShape10" -p "nurbsCircle10";
-	rename -uid "218C5FE5-4C1E-1139-70CF-67B9CFFC6321";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		21.826681793489396 6.9302417043028486 8.5700556857580157
-		21.753339664307411 6.9302417043028486 8.539676381157518
-		21.679997535125427 6.9302417043028486 8.5700556857580157
-		21.649618230524929 6.9302417043028486 8.6433978149400001
-		21.679997535125427 6.9302417043028486 8.7167399441219846
-		21.753339664307411 6.9302417043028486 8.7471192487224823
-		21.826681793489396 6.9302417043028486 8.7167399441219846
-		21.857061098089893 6.9302417043028486 8.6433978149400001
-		21.826681793489396 6.9302417043028486 8.5700556857580157
-		21.753339664307411 6.9302417043028486 8.539676381157518
-		21.679997535125427 6.9302417043028486 8.5700556857580157
-		;
-createNode transform -n "nurbsCircle11";
-	rename -uid "101B2048-42B3-A2E4-19C5-0EA0EA58CC3A";
-	setAttr ".rp" -type "double3" 21.753339664307411 7.2400087274761873 8.7432288014950466 ;
-	setAttr ".sp" -type "double3" 21.753339664307411 7.2400087274761873 8.7432288014950466 ;
-createNode nurbsCurve -n "nurbsCircleShape11" -p "nurbsCircle11";
-	rename -uid "C5DD2D63-49C2-3433-0EAC-39BBF2B7F6CD";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		21.826681793489396 7.2918694443674283 8.6913680846038055
-		21.753339664307411 7.3133508566581726 8.6698866723130621
-		21.679997535125427 7.2918694443674283 8.6913680846038055
-		21.649618230524929 7.2400087274761873 8.7432288014950466
-		21.679997535125427 7.1881480105849462 8.7950895183862876
-		21.753339664307411 7.1666665982942019 8.816570930677031
-		21.826681793489396 7.1881480105849462 8.7950895183862876
-		21.857061098089893 7.2400087274761873 8.7432288014950466
-		21.826681793489396 7.2918694443674283 8.6913680846038055
-		21.753339664307411 7.3133508566581726 8.6698866723130621
-		21.679997535125427 7.2918694443674283 8.6913680846038055
-		;
-createNode transform -n "nurbsCircle12";
-	rename -uid "43255EE0-4B56-EA0E-85FB-ABA55F5A7D2E";
-	setAttr ".rp" -type "double3" 21.753339664307411 7.2400087274761873 9.3595534193032446 ;
-	setAttr ".sp" -type "double3" 21.753339664307411 7.2400087274761873 9.3595534193032446 ;
-createNode nurbsCurve -n "nurbsCircleShape12" -p "nurbsCircle12";
-	rename -uid "9B71C494-48F7-DBB7-57B0-C3860EEAAB24";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		21.826681793489396 7.2918694443674283 9.4114141361944856
-		21.753339664307411 7.3133508566581726 9.432895548485229
-		21.679997535125427 7.2918694443674283 9.4114141361944856
-		21.649618230524929 7.2400087274761873 9.3595534193032446
-		21.679997535125427 7.1881480105849462 9.3076927024120035
-		21.753339664307411 7.1666665982942019 9.2862112901212601
-		21.826681793489396 7.1881480105849462 9.3076927024120035
-		21.857061098089893 7.2400087274761873 9.3595534193032446
-		21.826681793489396 7.2918694443674283 9.4114141361944856
-		21.753339664307411 7.3133508566581726 9.432895548485229
-		21.679997535125427 7.2918694443674283 9.4114141361944856
-		;
-createNode transform -n "nurbsCircle13";
-	rename -uid "EFA33344-450A-3BEC-6544-5AB29D005B40";
-	setAttr ".rp" -type "double3" 21.753339664307411 6.9367046813069217 9.4942648483308805 ;
-	setAttr ".sp" -type "double3" 21.753339664307411 6.9367046813069217 9.4942648483308805 ;
-createNode nurbsCurve -n "nurbsCircleShape13" -p "nurbsCircle13";
-	rename -uid "C879F1BA-497C-0C56-B79D-F28ABA340434";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		21.826681793489396 6.9367046813069217 9.5676069775128649
-		21.753339664307411 6.9367046813069217 9.5979862821133626
-		21.679997535125427 6.9367046813069217 9.5676069775128649
-		21.649618230524929 6.9367046813069217 9.4942648483308805
-		21.679997535125427 6.9367046813069217 9.420922719148896
-		21.753339664307411 6.9367046813069217 9.3905434145483984
-		21.826681793489396 6.9367046813069217 9.420922719148896
-		21.857061098089893 6.9367046813069217 9.4942648483308805
-		21.826681793489396 6.9367046813069217 9.5676069775128649
-		21.753339664307411 6.9367046813069217 9.5979862821133626
-		21.679997535125427 6.9367046813069217 9.5676069775128649
-		;
 createNode transform -n "TopHandlebarthing";
 	rename -uid "709217E5-465C-F152-9A3E-B1BA54A59AC4";
 	setAttr ".rp" -type "double3" 21.753339767456055 7.1026754896619515 9.0688314437866211 ;
@@ -7972,11 +7678,11 @@ createNode mesh -n "TopHandlebarthingShape" -p "TopHandlebarthing";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "pCube1";
+createNode transform -n "fuel1";
 	rename -uid "C979488D-4A7C-ECDB-3208-66A68F685D2A";
 	setAttr ".rp" -type "double3" 20.67737273290582 4.6485843103134847 17.031446451401766 ;
 	setAttr ".sp" -type "double3" 20.67737273290582 4.6485843103134847 17.031446451401766 ;
-createNode mesh -n "pCubeShape1" -p "pCube1";
+createNode mesh -n "fuelShape1" -p "fuel1";
 	rename -uid "E1AE8112-4807-34CD-32BA-50BF3E490FFC";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -8111,11 +7817,12 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "pCube2";
+createNode transform -n "fuel2";
 	rename -uid "35134A06-40DB-45BA-CE1F-99B0DD47FE1A";
+	setAttr ".t" -type "double3" 0 0 0.002105314365980604 ;
 	setAttr ".rp" -type "double3" 21.721401848335368 3.9195371428075738 17.333189912697772 ;
 	setAttr ".sp" -type "double3" 21.721401848335368 3.9195371428075738 17.333189912697772 ;
-createNode mesh -n "pCubeShape2" -p "pCube2";
+createNode mesh -n "fuelShape2" -p "fuel2";
 	rename -uid "C0610E7A-4E66-6083-E9DD-0EA878768F8A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -8266,11 +7973,12 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "pCube3";
+createNode transform -n "fuel3";
 	rename -uid "02D37C77-4A85-7CE8-5C4F-0481F5D71E0C";
+	setAttr ".t" -type "double3" 0 0 0.002105314365980604 ;
 	setAttr ".rp" -type "double3" 22.226233049633798 3.9195371428075738 17.333189912697772 ;
 	setAttr ".sp" -type "double3" 22.226233049633798 3.9195371428075738 17.333189912697772 ;
-createNode mesh -n "pCubeShape3" -p "pCube3";
+createNode mesh -n "fuelShape3" -p "fuel3";
 	rename -uid "02D84A71-4689-D9B1-A118-68A994BCF0FB";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -8421,11 +8129,12 @@ createNode mesh -n "pCubeShape3" -p "pCube3";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "pCube4";
+createNode transform -n "fuel4";
 	rename -uid "F20C5399-443E-C18B-2F2A-9C905B8298FA";
+	setAttr ".t" -type "double3" 0 0 0.002105314365980604 ;
 	setAttr ".rp" -type "double3" 22.759350787661557 3.9195371428075738 17.333189912697772 ;
 	setAttr ".sp" -type "double3" 22.759350787661557 3.9195371428075738 17.333189912697772 ;
-createNode mesh -n "pCubeShape4" -p "pCube4";
+createNode mesh -n "fuelShape4" -p "fuel4";
 	rename -uid "DF1ECF71-47BE-8BD6-CB1B-009AE8062688";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -8577,19 +8286,19 @@ createNode mesh -n "pCubeShape4" -p "pCube4";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C5CDB0C2-4B2B-ECC3-8057-7E8B6B54CD21";
-	setAttr -s 13 ".lnk";
-	setAttr -s 13 ".slnk";
+	rename -uid "7EF9E9AD-4C32-D415-E353-30AB7E52149B";
+	setAttr -s 18 ".lnk";
+	setAttr -s 18 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F5B4DB08-476A-9317-1AA6-35BB60FB26CC";
+	rename -uid "F0374761-418C-44D1-51F5-8DA7FB5BFB0B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "B25B1073-46CF-B867-A7C9-AD9A1F06035C";
+	rename -uid "F3BF2F07-41BC-54CD-B70E-828FE9B2EBCC";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "EC400F53-4BD0-0F43-8213-A39DD4F49DC9";
+	rename -uid "E67AE814-4D78-06F3-D1C3-28BCF8DD5501";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "2C28B8F2-45BF-768A-A0CB-EA830BDCACD8";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "BD431E70-4CAA-7FD8-3DAD-91AFFD036348";
+	rename -uid "98AB1019-4227-0408-D92F-B897DBBD24DD";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "66D168CF-4FB1-5439-8AE2-288FEE71F31F";
 	setAttr ".g" yes;
@@ -8682,6 +8391,7 @@ createNode groupId -n "groupId16";
 	setAttr ".ihi" 0;
 createNode lambert -n "FrontthingMat";
 	rename -uid "45CBB06F-434E-7C1E-12DE-7699CC931C36";
+	setAttr ".c" -type "float3" 0.31818181 0.31818181 0.31818181 ;
 createNode shadingEngine -n "lambert3SG";
 	rename -uid "C9B84FAF-42F2-21FD-83D9-FEB94B2DD1A3";
 	setAttr ".ihi" 0;
@@ -8782,6 +8492,66 @@ createNode materialInfo -n "materialInfo10";
 createNode groupId -n "groupId35";
 	rename -uid "EDC11AD6-41FE-5128-5D57-4B9A8BF6D8AB";
 	setAttr ".ihi" 0;
+createNode lambert -n "HeadlighthousingMat";
+	rename -uid "CF9689B3-45FC-F0C6-9CA0-8E9BE21DDDBD";
+	setAttr ".c" -type "float3" 0.72077924 0.72077924 0.72077924 ;
+createNode shadingEngine -n "lambert8SG";
+	rename -uid "ACB487B6-4369-96C4-DDE4-388C5F81D1E0";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo11";
+	rename -uid "99C9A9E1-45D3-46BD-78BD-7A80D5F7C533";
+createNode groupId -n "groupId36";
+	rename -uid "C54F7088-4750-ABF5-4C4D-B5AB036AEA0B";
+	setAttr ".ihi" 0;
+createNode lambert -n "GunnerareaMat";
+	rename -uid "B3808270-4099-654E-E1AC-FDA54F1E9461";
+	setAttr ".c" -type "float3" 0.19480519 0.19480519 0.19480519 ;
+createNode shadingEngine -n "lambert9SG";
+	rename -uid "E8F23A0A-4383-5058-302E-6CA3E384733C";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo12";
+	rename -uid "4B7C3FB4-4DBF-71F6-4352-C1BB25AD8384";
+createNode groupId -n "groupId37";
+	rename -uid "CA398E61-4D29-CD1F-8752-3A8CA56B2DAF";
+	setAttr ".ihi" 0;
+createNode lambert -n "CenterconsoleMat";
+	rename -uid "6EEF263C-4B22-10E0-6104-5AB55B3600B8";
+	setAttr ".c" -type "float3" 0.32467532 0.32467532 0.32467532 ;
+createNode shadingEngine -n "lambert10SG";
+	rename -uid "CA059619-4425-7A35-71D2-AE85D04CA3DD";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo13";
+	rename -uid "DBAC6395-4249-F2E3-51A5-4F87FF5C9578";
+createNode groupId -n "groupId38";
+	rename -uid "BEAA8D2C-4CE0-F5BE-52B0-D6AB04E821D8";
+	setAttr ".ihi" 0;
+createNode lambert -n "SideconsolesMat";
+	rename -uid "46FC9D10-4D8F-F94A-37D6-B3AEA4A40AF7";
+	setAttr ".c" -type "float3" 0 0 0 ;
+createNode shadingEngine -n "lambert11SG";
+	rename -uid "B2856649-4731-1AC9-F90E-0E82E798873D";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo14";
+	rename -uid "94BCFFBB-461E-E1BF-5929-34B92D049D0C";
+createNode groupId -n "groupId39";
+	rename -uid "AD499A22-48AC-FE1B-E56A-D68B1DE4BDE1";
+	setAttr ".ihi" 0;
+createNode lambert -n "SeatAreaMat";
+	rename -uid "F0D18399-497A-5413-B75E-6499834770DA";
+	setAttr ".c" -type "float3" 0.27272728 0.27272728 0.27272728 ;
+createNode shadingEngine -n "lambert12SG";
+	rename -uid "65294E43-47A7-E6EE-740E-7F9F5BDDD7B5";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo15";
+	rename -uid "94E75E42-4B8D-416B-C67E-5591F767648D";
+createNode groupId -n "groupId40";
+	rename -uid "6891C504-4F49-7235-1CFB-D9B4EC5DF812";
+	setAttr ".ihi" 0;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -8792,10 +8562,10 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 13 ".st";
+	setAttr -s 18 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 15 ".s";
+	setAttr -s 20 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
@@ -8831,6 +8601,16 @@ connectAttr "groupId34.id" "WarthogBodyShape.iog.og[6].gid";
 connectAttr "lambert6SG.mwc" "WarthogBodyShape.iog.og[6].gco";
 connectAttr "groupId35.id" "WarthogBodyShape.iog.og[7].gid";
 connectAttr "lambert7SG.mwc" "WarthogBodyShape.iog.og[7].gco";
+connectAttr "groupId36.id" "WarthogBodyShape.iog.og[8].gid";
+connectAttr "lambert8SG.mwc" "WarthogBodyShape.iog.og[8].gco";
+connectAttr "groupId37.id" "WarthogBodyShape.iog.og[9].gid";
+connectAttr "lambert9SG.mwc" "WarthogBodyShape.iog.og[9].gco";
+connectAttr "groupId38.id" "WarthogBodyShape.iog.og[10].gid";
+connectAttr "lambert10SG.mwc" "WarthogBodyShape.iog.og[10].gco";
+connectAttr "groupId39.id" "WarthogBodyShape.iog.og[11].gid";
+connectAttr "lambert11SG.mwc" "WarthogBodyShape.iog.og[11].gco";
+connectAttr "groupId40.id" "WarthogBodyShape.iog.og[12].gid";
+connectAttr "lambert12SG.mwc" "WarthogBodyShape.iog.og[12].gco";
 connectAttr "groupId27.id" "ForwardRollcageLShape.iog.og[0].gid";
 connectAttr "blinn2SG.mwc" "ForwardRollcageLShape.iog.og[0].gco";
 connectAttr "groupId26.id" "ForwardRollcageRShape.iog.og[0].gid";
@@ -8848,6 +8628,11 @@ relationship "link" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.messa
 relationship "link" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert6SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert8SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert9SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert10SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert11SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert12SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
@@ -8861,6 +8646,11 @@ relationship "shadowLink" ":lightLinker1" "lambert4SG.message" ":defaultLightSet
 relationship "shadowLink" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert6SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert8SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert9SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert10SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert11SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert12SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "Windows.oc" "blinn1SG.ss";
@@ -8923,10 +8713,10 @@ connectAttr "WarthogBodyShape.iog.og[3]" "blinn3SG.dsm" -na;
 connectAttr "blinn3SG.msg" "materialInfo5.sg";
 connectAttr "HeadlightMat.msg" "materialInfo5.m";
 connectAttr "FuelTankMat.oc" "blinn4SG.ss";
-connectAttr "pCubeShape4.iog" "blinn4SG.dsm" -na;
-connectAttr "pCubeShape3.iog" "blinn4SG.dsm" -na;
-connectAttr "pCubeShape2.iog" "blinn4SG.dsm" -na;
-connectAttr "pCubeShape1.iog" "blinn4SG.dsm" -na;
+connectAttr "fuelShape4.iog" "blinn4SG.dsm" -na;
+connectAttr "fuelShape3.iog" "blinn4SG.dsm" -na;
+connectAttr "fuelShape2.iog" "blinn4SG.dsm" -na;
+connectAttr "fuelShape1.iog" "blinn4SG.dsm" -na;
 connectAttr "blinn4SG.msg" "materialInfo6.sg";
 connectAttr "FuelTankMat.msg" "materialInfo6.m";
 connectAttr "TopthingMat.oc" "lambert4SG.ss";
@@ -8949,6 +8739,31 @@ connectAttr "groupId35.msg" "lambert7SG.gn" -na;
 connectAttr "WarthogBodyShape.iog.og[7]" "lambert7SG.dsm" -na;
 connectAttr "lambert7SG.msg" "materialInfo10.sg";
 connectAttr "FuelhousingMat.msg" "materialInfo10.m";
+connectAttr "HeadlighthousingMat.oc" "lambert8SG.ss";
+connectAttr "groupId36.msg" "lambert8SG.gn" -na;
+connectAttr "WarthogBodyShape.iog.og[8]" "lambert8SG.dsm" -na;
+connectAttr "lambert8SG.msg" "materialInfo11.sg";
+connectAttr "HeadlighthousingMat.msg" "materialInfo11.m";
+connectAttr "GunnerareaMat.oc" "lambert9SG.ss";
+connectAttr "groupId37.msg" "lambert9SG.gn" -na;
+connectAttr "WarthogBodyShape.iog.og[9]" "lambert9SG.dsm" -na;
+connectAttr "lambert9SG.msg" "materialInfo12.sg";
+connectAttr "GunnerareaMat.msg" "materialInfo12.m";
+connectAttr "CenterconsoleMat.oc" "lambert10SG.ss";
+connectAttr "groupId38.msg" "lambert10SG.gn" -na;
+connectAttr "WarthogBodyShape.iog.og[10]" "lambert10SG.dsm" -na;
+connectAttr "lambert10SG.msg" "materialInfo13.sg";
+connectAttr "CenterconsoleMat.msg" "materialInfo13.m";
+connectAttr "SideconsolesMat.oc" "lambert11SG.ss";
+connectAttr "groupId39.msg" "lambert11SG.gn" -na;
+connectAttr "WarthogBodyShape.iog.og[11]" "lambert11SG.dsm" -na;
+connectAttr "lambert11SG.msg" "materialInfo14.sg";
+connectAttr "SideconsolesMat.msg" "materialInfo14.m";
+connectAttr "SeatAreaMat.oc" "lambert12SG.ss";
+connectAttr "groupId40.msg" "lambert12SG.gn" -na;
+connectAttr "WarthogBodyShape.iog.og[12]" "lambert12SG.dsm" -na;
+connectAttr "lambert12SG.msg" "materialInfo15.sg";
+connectAttr "SeatAreaMat.msg" "materialInfo15.m";
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "pasted__blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
@@ -8960,6 +8775,11 @@ connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert5SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert6SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert7SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert8SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert9SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert10SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert11SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert12SG.pa" ":renderPartition.st" -na;
 connectAttr "Windows.msg" ":defaultShaderList1.s" -na;
 connectAttr "pasted__blinn1.msg" ":defaultShaderList1.s" -na;
 connectAttr "GreenMat.msg" ":defaultShaderList1.s" -na;
@@ -8971,6 +8791,11 @@ connectAttr "TopthingMat.msg" ":defaultShaderList1.s" -na;
 connectAttr "RearAreaMat.msg" ":defaultShaderList1.s" -na;
 connectAttr "Backplate.msg" ":defaultShaderList1.s" -na;
 connectAttr "FuelhousingMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "HeadlighthousingMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "GunnerareaMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "CenterconsoleMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "SideconsolesMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "SeatAreaMat.msg" ":defaultShaderList1.s" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
