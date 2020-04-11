@@ -26,6 +26,13 @@ Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.50 0.50 0.50
+newmtl blinn5SG
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
 newmtl initialShadingGroup
 illum 4
 Kd 0.00 0.00 0.00
@@ -40,7 +47,7 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 newmtl lambert3SG
 illum 4
-Kd 0.32 0.32 0.32
+Kd 0.03 0.03 0.03
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
@@ -137,6 +144,18 @@ Ni 1.00
 newmtl lambert19SG
 illum 4
 Kd 0.31 0.41 0.28
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert20SG
+illum 4
+Kd 0.50 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert21SG
+illum 4
+Kd 0.16 0.16 0.16
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
