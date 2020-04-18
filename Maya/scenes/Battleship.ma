@@ -1,11 +1,12 @@
 //Maya ASCII 2019 scene
 //Name: Battleship.ma
-//Last modified: Thu, Apr 16, 2020 11:56:53 PM
+//Last modified: Sat, Apr 18, 2020 12:33:00 AM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
 requires "stereoCamera" "10.0";
 requires "mtoa" "3.1.2";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2019";
@@ -16,51 +17,51 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "9094ACD3-4CD5-FCB7-D401-9DA4D54144E3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.49217550971153656 4.961114694251874 13.591673342596616 ;
-	setAttr ".r" -type "double3" -15.938352916744648 -2159.3999999993562 -4.3486530429694262e-16 ;
+	setAttr ".t" -type "double3" 8.3006128428894375 11.990071044527163 13.424136179386725 ;
+	setAttr ".r" -type "double3" -30.33835285566537 -1401.3999999996606 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6451BA41-4BD6-D749-1E4F-328978C15C87";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 10.665487564878129;
+	setAttr ".coi" 24.180004105162226;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.67391077283543055 0.42548523721099185 0 ;
+	setAttr ".tp" -type "double3" -5.6966222856330679 0.70326435550337907 0 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
 	rename -uid "FA018830-447A-7B4D-9E7A-E6BB212B02AD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.047661683825608647 1000.1700958613503 1.1987480682684339 ;
+	setAttr ".t" -type "double3" -4.003830048831313 1000.1740523278116 -0.047333072671019438 ;
 	setAttr ".r" -type "double3" -90 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	rename -uid "C01151D4-4BE4-B668-1F7B-F1A43EFE7EEE";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 999.74461062413934;
-	setAttr ".ow" 12.279571468382866;
+	setAttr ".coi" 999.47078797230824;
+	setAttr ".ow" 4.4882635111529519;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
-	setAttr ".tp" -type "double3" -0.67391077283543055 0.42548523721099185 0 ;
+	setAttr ".tp" -type "double3" -1.1134120108859518 0.70326435550337907 0 ;
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
 	rename -uid "7258C64F-48E2-A327-8059-37A06A967157";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.2898138589851959 0.91190868056146535 1000.1196920954736 ;
+	setAttr ".t" -type "double3" -2.2197425339709809 0.86929321297903728 1000.119732615183 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "38C1B8B9-4F48-3F70-653C-22B8BE32D41F";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 1000.1196920954736;
-	setAttr ".ow" 2.3129448409950699;
+	setAttr ".coi" 1000.119732615183;
+	setAttr ".ow" 3.4137732323867209;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
-	setAttr ".tp" -type "double3" 0.22496414184570313 0.39572388678789139 0 ;
+	setAttr ".tp" -type "double3" 0.47932661022218187 0.70326435550337907 0 ;
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
@@ -87,14 +88,14 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "pPlane1";
 	rename -uid "9C709E3C-41D8-C1CA-88CF-70B0C2E7DF10";
-	setAttr ".t" -type "double3" 0 -0.045534668409093149 -2.7304955483760223 ;
+	setAttr ".t" -type "double3" 0 0.37953066046603867 -2.7304955483760223 ;
 	setAttr ".s" -type "double3" 31.409024694240117 9.1361224354720285 9.6953485960904242 ;
 createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	rename -uid "E83B9404-4DD3-6D19-C928-42973393F257";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.95000001788139343 0.5000000074505806 ;
+	setAttr ".pv" -type "double2" 0.55000001192092896 0.2500000074505806 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 121 ".uvst[0].uvsp[0:120]" -type "float2" 0 0 0.1 0 0.2 0 0.30000001
 		 0 0.40000001 0 0.5 0 0.60000002 0 0.69999999 0 0.80000001 0 0.90000004 0 1 0 0 0.1
@@ -389,7 +390,7 @@ createNode mesh -n "MainhullShape" -p "Mainhull";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.25 0 ;
+	setAttr ".pv" -type "double2" 0.75 0.25 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 270 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.375 0 0.625 0 0.375 0.25
@@ -1118,7 +1119,7 @@ createNode mesh -n "pPlaneShape2" -p "pPlane2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.65000000596046448 0.5 ;
+	setAttr ".pv" -type "double2" 0.35000000894069672 0.50000001490116119 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 121 ".uvst[0].uvsp[0:120]" -type "float2" 0 0 0.1 0 0.2 0 0.30000001
 		 0 0.40000001 0 0.5 0 0.60000002 0 0.69999999 0 0.80000001 0 0.90000004 0 1 0 0 0.1
@@ -8412,8 +8413,8 @@ createNode parentConstraint -n "Turret2Gun6_parentConstraint1" -p "Turret3Gun3";
 	setAttr -k on ".w0";
 createNode transform -n "Superstructure1";
 	rename -uid "49D3738D-45D5-35D5-7A51-2FAE2C35ADC1";
-	setAttr ".t" -type "double3" 2.6849150299676094 0.42548530873656254 0 ;
-	setAttr ".s" -type "double3" 1 0.39999998313595003 2.3888889132327624 ;
+	setAttr ".rp" -type "double3" 2.6849150299676094 0.42548530873656254 0 ;
+	setAttr ".sp" -type "double3" 2.6849150299676094 0.42548530873656254 0 ;
 createNode mesh -n "SuperstructureShape1" -p "Superstructure1";
 	rename -uid "28349368-4AA8-626E-3F9D-F08FC07EE55A";
 	setAttr -k off ".v";
@@ -8430,11 +8431,16 @@ createNode mesh -n "SuperstructureShape1" -p "Superstructure1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 16 ".pt[8:23]" -type "float3"  -0.25381452 0 -0.072135799 
-		-0.25381452 0 0.072135799 -0.25381452 0 -0.072135799 -0.25381452 0 0.072135799 0 
-		0 -7.4505806e-09 0 0 7.4505806e-09 0 0 7.4505806e-09 0 0 -7.4505806e-09 0 0 -7.4505806e-09 
-		0 0 7.4505806e-09 0 0 7.4505806e-09 0 0 -7.4505806e-09 -1.7050567 0 0.28128549 -1.7050567 
-		0 -0.28128549 -1.7050567 0 -0.28128549 -1.7050567 0 0.28128549;
+	setAttr -s 24 ".pt[0:23]" -type "float3"  2.6849151 0.72548532 0.69444436 
+		2.6849151 0.72548532 0.69444436 2.6849151 0.12548551 0.69444436 2.6849151 0.12548551 
+		0.69444436 2.6849151 0.12548551 -0.69444436 2.6849151 0.12548551 -0.69444436 2.6849151 
+		0.72548532 -0.69444436 2.6849151 0.72548532 -0.69444436 2.4311006 0.72548532 -0.51557761 
+		2.4311006 0.72548532 0.51557761 2.4311006 0.12548551 -0.51557761 2.4311006 0.12548551 
+		0.51557761 2.6849151 0.72548532 -0.5986625 2.6849151 0.72548532 0.5986625 2.6849151 
+		0.12548551 0.5986625 2.6849151 0.12548551 -0.5986625 2.6849151 0.72548532 -0.5986625 
+		2.6849151 0.72548532 0.5986625 2.6849151 0.12548551 0.5986625 2.6849151 0.12548551 
+		-0.5986625 0.9798584 0.72548532 0.073297322 0.9798584 0.72548532 -0.073297322 0.9798584 
+		0.12548551 -0.073297322 0.9798584 0.12548551 0.073297322;
 	setAttr -s 24 ".vt[0:23]"  -1.80128038 -0.5 0.49999994 0.50000095 -0.5 0.49999994
 		 -1.80128038 0.49999964 0.49999994 0.50000095 0.49999964 0.49999994 -1.80128038 0.49999964 -0.49999994
 		 0.50000095 0.49999964 -0.49999994 -1.80128038 -0.5 -0.49999994 0.50000095 -0.5 -0.49999994
@@ -8662,7 +8668,7 @@ createNode mesh -n "smallturret1Shape" -p "smallturret1";
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.375 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 90 ".uvst[0].uvsp[0:89]" -type "float2" 0.375 0 0.625 0 0.375
+	setAttr -s 114 ".uvst[0].uvsp[0:113]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
 		 0.875 0.25 0.125 0 0.125 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5
 		 0.625 0.75 0.375 0.75 0.375 0.5 0.375 0.5 0.625 0.5 0.625 0.5 0.625 0.75 0.375 0.75
@@ -8673,7 +8679,10 @@ createNode mesh -n "smallturret1Shape" -p "smallturret1";
 		 0.625 0.5 0.625 0.25 0.625 0.5 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.375 0.5
 		 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.625
 		 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.5 0.625 0.5 0.625 0.25 0.375
-		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25;
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25 0.375
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.5 0.375 0.5 0.375 0.25 0.375
+		 0.5 0.375 0.5 0.375 0.5 0.375 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625
+		 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -8871,17 +8880,17 @@ createNode mesh -n "smallturret1Shape" -p "smallturret1";
 		f 4 -133 143 144 -142
 		mu 0 4 74 75 81 80
 		f 4 134 138 -148 -147
-		mu 0 4 66 67 83 82
+		mu 0 4 90 91 92 93
 		f 4 -137 148 149 -144
-		mu 0 4 68 69 85 84
+		mu 0 4 94 95 96 97
 		f 4 -138 146 150 -149
-		mu 0 4 69 66 82 85
+		mu 0 4 98 99 100 101
 		f 4 -117 151 153 -153
-		mu 0 4 76 72 78 86
+		mu 0 4 102 103 104 105
 		f 4 119 156 -158 -155
-		mu 0 4 75 77 87 81
+		mu 0 4 106 107 108 109
 		f 4 -121 152 158 -157
-		mu 0 4 77 76 86 87
+		mu 0 4 110 111 112 113
 		f 4 -123 159 160 -152
 		mu 0 4 67 70 88 83
 		f 4 124 161 -163 -160
@@ -10223,11 +10232,10 @@ createNode parentConstraint -n "miniright1_parentConstraint1" -p "miniright2";
 	setAttr ".tg[0].tr" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].tor" -type "double3" 90 0 0 ;
 	setAttr ".tg[0].ts" -type "double3" 0.10287317374084579 0.026750892989046534 0.10287317374084579 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 90 0 90 ;
 	setAttr ".rst" -type "double3" 0.089738478629556584 0.86350822908481617 1.4561055924537871 ;
 	setAttr ".rsrr" -type "double3" 90 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "miniright2_parentConstraint1" -p "miniright2";
 	rename -uid "F56B700C-4DE7-6334-AA0A-23B709F5AD68";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "minigunright2W0" -dv 1 -min 0 -at "double";
@@ -10595,11 +10603,10 @@ createNode parentConstraint -n "minileft1_parentConstraint1" -p "minileft2";
 	setAttr ".tg[0].tr" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].tor" -type "double3" 90 0 0 ;
 	setAttr ".tg[0].ts" -type "double3" 0.10287317374084579 0.026750892989046534 0.10287317374084579 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 90 0 90 ;
 	setAttr ".rst" -type "double3" 0.28783246350890213 0.8635082290848165 1.4561055924537871 ;
 	setAttr ".rsrr" -type "double3" 90 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "minileft2_parentConstraint1" -p "minileft2";
 	rename -uid "908C2AA0-4F24-D63C-0CFB-C38E4D9876DC";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "minigunleft2W0" -dv 1 -min 0 -at "double";
@@ -10742,11 +10749,10 @@ createNode parentConstraint -n "minigunleft1_parentConstraint1" -p "minigunleft2
 	setAttr ".tg[0].tot" -type "double3" 0.28307042689064982 1.5785242586648458 0.13007766135182619 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].ts" -type "double3" 0.46290858128406609 0.074756333949229314 0.45548358511737569 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 0 0 90 ;
 	setAttr ".rst" -type "double3" 0.28764188118987677 0.82378021538955393 1.2472733751364051 ;
 	setAttr ".rsrr" -type "double3" 0 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "minigunleft2_parentConstraint1" -p "minigunleft2";
 	rename -uid "FFAD7940-4C43-BD3A-090B-7D9215FA7B25";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "smallturret2W0" -dv 1 -min 0 -at "double";
@@ -10888,11 +10894,10 @@ createNode parentConstraint -n "minigunright1_parentConstraint1" -p "minigunrigh
 	setAttr ".tg[0].tot" -type "double3" -0.14445114121542033 1.5785242586648458 0.13007766135182619 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].ts" -type "double3" 0.46290858128406609 0.074756333949229314 0.45548358511737569 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 0 0 90 ;
 	setAttr ".rst" -type "double3" 0.089738478629556612 0.82378021538955393 1.2472733751364051 ;
 	setAttr ".rsrr" -type "double3" 0 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "minigunright2_parentConstraint1" -p "minigunright2";
 	rename -uid "5C64F48F-45A0-4B4D-FB70-C2915EAEF0DC";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "smallturret2W0" -dv 1 -min 0 -at "double";
@@ -10924,7 +10929,7 @@ createNode mesh -n "smallturret2Shape" -p "smallturret2";
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.375 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 90 ".uvst[0].uvsp[0:89]" -type "float2" 0.375 0 0.625 0 0.375
+	setAttr -s 114 ".uvst[0].uvsp[0:113]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
 		 0.875 0.25 0.125 0 0.125 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5
 		 0.625 0.75 0.375 0.75 0.375 0.5 0.375 0.5 0.625 0.5 0.625 0.5 0.625 0.75 0.375 0.75
@@ -10935,7 +10940,10 @@ createNode mesh -n "smallturret2Shape" -p "smallturret2";
 		 0.625 0.5 0.625 0.25 0.625 0.5 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.375 0.5
 		 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.625
 		 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.5 0.625 0.5 0.625 0.25 0.375
-		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25;
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25 0.375
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.5 0.375 0.5 0.375 0.25 0.375
+		 0.5 0.375 0.5 0.375 0.5 0.375 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625
+		 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -11133,17 +11141,17 @@ createNode mesh -n "smallturret2Shape" -p "smallturret2";
 		f 4 -133 143 144 -142
 		mu 0 4 74 75 81 80
 		f 4 134 138 -148 -147
-		mu 0 4 66 67 83 82
+		mu 0 4 90 91 92 93
 		f 4 -137 148 149 -144
-		mu 0 4 68 69 85 84
+		mu 0 4 94 95 96 97
 		f 4 -138 146 150 -149
-		mu 0 4 69 66 82 85
+		mu 0 4 98 99 100 101
 		f 4 -117 151 153 -153
-		mu 0 4 76 72 78 86
+		mu 0 4 102 103 104 105
 		f 4 119 156 -158 -155
-		mu 0 4 75 77 87 81
+		mu 0 4 106 107 108 109
 		f 4 -121 152 158 -157
-		mu 0 4 77 76 86 87
+		mu 0 4 110 111 112 113
 		f 4 -123 159 160 -152
 		mu 0 4 67 70 88 83
 		f 4 124 161 -163 -160
@@ -11163,7 +11171,7 @@ createNode mesh -n "polySurfaceShape2" -p "smallturret2";
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.5 0.625 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 90 ".uvst[0].uvsp[0:89]" -type "float2" 0.375 0 0.625 0 0.375
+	setAttr -s 114 ".uvst[0].uvsp[0:113]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
 		 0.875 0.25 0.125 0 0.125 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5
 		 0.625 0.75 0.375 0.75 0.375 0.5 0.375 0.5 0.625 0.5 0.625 0.5 0.625 0.75 0.375 0.75
@@ -11174,12 +11182,15 @@ createNode mesh -n "polySurfaceShape2" -p "smallturret2";
 		 0.625 0.5 0.625 0.25 0.625 0.5 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.375 0.5
 		 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.625
 		 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.5 0.625 0.5 0.625 0.25 0.375
-		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25;
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25 0.375
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.5 0.375 0.5 0.375 0.25 0.375
+		 0.5 0.375 0.5 0.375 0.5 0.375 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625
+		 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 36 ".pt";
+	setAttr -s 30 ".pt";
 	setAttr ".pt[8]" -type "float3" 0 3.9968029e-15 0.19252348 ;
 	setAttr ".pt[9]" -type "float3" 0 3.9968029e-15 0.19252348 ;
 	setAttr ".pt[54]" -type "float3" 0 3.9968029e-15 0.19252348 ;
@@ -11403,17 +11414,17 @@ createNode mesh -n "polySurfaceShape2" -p "smallturret2";
 		f 4 -133 143 144 -142
 		mu 0 4 74 75 81 80
 		f 4 134 138 -148 -147
-		mu 0 4 66 67 83 82
+		mu 0 4 90 91 92 93
 		f 4 -137 148 149 -144
-		mu 0 4 68 69 85 84
+		mu 0 4 94 95 96 97
 		f 4 -138 146 150 -149
-		mu 0 4 69 66 82 85
+		mu 0 4 98 99 100 101
 		f 4 -117 151 153 -153
-		mu 0 4 76 72 78 86
+		mu 0 4 102 103 104 105
 		f 4 119 156 -158 -155
-		mu 0 4 75 77 87 81
+		mu 0 4 106 107 108 109
 		f 4 -121 152 158 -157
-		mu 0 4 77 76 86 87
+		mu 0 4 110 111 112 113
 		f 4 -123 159 160 -152
 		mu 0 4 67 70 88 83
 		f 4 124 161 -163 -160
@@ -11444,9 +11455,8 @@ createNode parentConstraint -n "smallturret1_parentConstraint1" -p "smallturret2
 	setAttr ".tg[0].tt" -type "double3" 0.18651564262670278 0.63343373375803991 1.2104799481715789 ;
 	setAttr ".tg[0].tot" -type "double3" -0.15121796524977749 1.7658327520235773 -0.1135282124936694 ;
 	setAttr ".tg[0].ts" -type "double3" 0.19779059388114381 0.040967523634899292 0.19779059388114381 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".rst" -type "double3" 0.15660615147445112 0.70577552876184502 1.1880251356001914 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "smallturret2_parentConstraint1" -p "smallturret2";
 	rename -uid "AC69DB47-4C09-D727-2104-7ABD12B53026";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "minipivot2W0" -dv 1 -min 0 -at "double";
@@ -11696,7 +11706,7 @@ createNode mesh -n "smallturret3Shape" -p "smallturret3";
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.375 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 90 ".uvst[0].uvsp[0:89]" -type "float2" 0.375 0 0.625 0 0.375
+	setAttr -s 114 ".uvst[0].uvsp[0:113]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
 		 0.875 0.25 0.125 0 0.125 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5
 		 0.625 0.75 0.375 0.75 0.375 0.5 0.375 0.5 0.625 0.5 0.625 0.5 0.625 0.75 0.375 0.75
@@ -11707,7 +11717,10 @@ createNode mesh -n "smallturret3Shape" -p "smallturret3";
 		 0.625 0.5 0.625 0.25 0.625 0.5 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.375 0.5
 		 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.625
 		 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.5 0.625 0.5 0.625 0.25 0.375
-		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25;
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25 0.375
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.5 0.375 0.5 0.375 0.25 0.375
+		 0.5 0.375 0.5 0.375 0.5 0.375 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625
+		 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -11905,17 +11918,17 @@ createNode mesh -n "smallturret3Shape" -p "smallturret3";
 		f 4 -133 143 144 -142
 		mu 0 4 74 75 81 80
 		f 4 134 138 -148 -147
-		mu 0 4 66 67 83 82
+		mu 0 4 90 91 92 93
 		f 4 -137 148 149 -144
-		mu 0 4 68 69 85 84
+		mu 0 4 94 95 96 97
 		f 4 -138 146 150 -149
-		mu 0 4 69 66 82 85
+		mu 0 4 98 99 100 101
 		f 4 -117 151 153 -153
-		mu 0 4 76 72 78 86
+		mu 0 4 102 103 104 105
 		f 4 119 156 -158 -155
-		mu 0 4 75 77 87 81
+		mu 0 4 106 107 108 109
 		f 4 -121 152 158 -157
-		mu 0 4 77 76 86 87
+		mu 0 4 110 111 112 113
 		f 4 -123 159 160 -152
 		mu 0 4 67 70 88 83
 		f 4 124 161 -163 -160
@@ -11935,7 +11948,7 @@ createNode mesh -n "polySurfaceShape2" -p "smallturret3";
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.5 0.625 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 90 ".uvst[0].uvsp[0:89]" -type "float2" 0.375 0 0.625 0 0.375
+	setAttr -s 114 ".uvst[0].uvsp[0:113]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
 		 0.875 0.25 0.125 0 0.125 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5
 		 0.625 0.75 0.375 0.75 0.375 0.5 0.375 0.5 0.625 0.5 0.625 0.5 0.625 0.75 0.375 0.75
@@ -11946,12 +11959,15 @@ createNode mesh -n "polySurfaceShape2" -p "smallturret3";
 		 0.625 0.5 0.625 0.25 0.625 0.5 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.375 0.5
 		 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.625
 		 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.5 0.625 0.5 0.625 0.25 0.375
-		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25;
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25 0.375
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.5 0.375 0.5 0.375 0.25 0.375
+		 0.5 0.375 0.5 0.375 0.5 0.375 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625
+		 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 36 ".pt";
+	setAttr -s 30 ".pt";
 	setAttr ".pt[8]" -type "float3" 0 3.9968029e-15 0.19252348 ;
 	setAttr ".pt[9]" -type "float3" 0 3.9968029e-15 0.19252348 ;
 	setAttr ".pt[54]" -type "float3" 0 3.9968029e-15 0.19252348 ;
@@ -12175,17 +12191,17 @@ createNode mesh -n "polySurfaceShape2" -p "smallturret3";
 		f 4 -133 143 144 -142
 		mu 0 4 74 75 81 80
 		f 4 134 138 -148 -147
-		mu 0 4 66 67 83 82
+		mu 0 4 90 91 92 93
 		f 4 -137 148 149 -144
-		mu 0 4 68 69 85 84
+		mu 0 4 94 95 96 97
 		f 4 -138 146 150 -149
-		mu 0 4 69 66 82 85
+		mu 0 4 98 99 100 101
 		f 4 -117 151 153 -153
-		mu 0 4 76 72 78 86
+		mu 0 4 102 103 104 105
 		f 4 119 156 -158 -155
-		mu 0 4 75 77 87 81
+		mu 0 4 106 107 108 109
 		f 4 -121 152 158 -157
-		mu 0 4 77 76 86 87
+		mu 0 4 110 111 112 113
 		f 4 -123 159 160 -152
 		mu 0 4 67 70 88 83
 		f 4 124 161 -163 -160
@@ -12216,9 +12232,8 @@ createNode parentConstraint -n "smallturret1_parentConstraint1" -p "smallturret3
 	setAttr ".tg[0].tt" -type "double3" 0.18651564262670278 0.63343373375803991 1.2104799481715789 ;
 	setAttr ".tg[0].tot" -type "double3" -0.15121796524977749 1.7658327520235773 -0.1135282124936694 ;
 	setAttr ".tg[0].ts" -type "double3" 0.19779059388114381 0.040967523634899292 0.19779059388114381 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".rst" -type "double3" 0.15660615147445112 0.70577552876184502 1.1880251356001914 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "smallturret3_parentConstraint1" -p "smallturret3";
 	rename -uid "777F060D-4EEA-220F-C98A-7EBEA1337611";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "minipivot3W0" -dv 1 -min 0 -at "double";
@@ -12357,11 +12372,10 @@ createNode parentConstraint -n "minigunright1_parentConstraint1" -p "minigunrigh
 	setAttr ".tg[0].tot" -type "double3" -0.14445114121542033 1.5785242586648458 0.13007766135182619 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].ts" -type "double3" 0.46290858128406609 0.074756333949229314 0.45548358511737569 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 0 0 90 ;
 	setAttr ".rst" -type "double3" 0.089738478629556612 0.82378021538955393 1.2472733751364051 ;
 	setAttr ".rsrr" -type "double3" 0 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "minigunright3_parentConstraint1" -p "minigunright3";
 	rename -uid "A95FEDF1-4693-D204-3D76-AA98D23A9A43";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "smallturret3W0" -dv 1 -min 0 -at "double";
@@ -12727,11 +12741,10 @@ createNode parentConstraint -n "miniright1_parentConstraint1" -p "miniright3";
 	setAttr ".tg[0].tr" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].tor" -type "double3" 90 0 0 ;
 	setAttr ".tg[0].ts" -type "double3" 0.10287317374084579 0.026750892989046534 0.10287317374084579 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 90 0 90 ;
 	setAttr ".rst" -type "double3" 0.089738478629556584 0.86350822908481617 1.4561055924537871 ;
 	setAttr ".rsrr" -type "double3" 90 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "miniright3_parentConstraint1" -p "miniright3";
 	rename -uid "A772DB67-44D7-3F89-0B25-C1AD3A36B3EA";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "minigunright3W0" -dv 1 -min 0 -at "double";
@@ -12875,11 +12888,10 @@ createNode parentConstraint -n "minigunleft1_parentConstraint1" -p "minigunleft3
 	setAttr ".tg[0].tot" -type "double3" 0.28307042689064982 1.5785242586648458 0.13007766135182619 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].ts" -type "double3" 0.46290858128406609 0.074756333949229314 0.45548358511737569 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 0 0 90 ;
 	setAttr ".rst" -type "double3" 0.28764188118987677 0.82378021538955393 1.2472733751364051 ;
 	setAttr ".rsrr" -type "double3" 0 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "minigunleft3_parentConstraint1" -p "minigunleft3";
 	rename -uid "F013CA66-44B1-35AC-08D1-ADA042FA693D";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "smallturret3W0" -dv 1 -min 0 -at "double";
@@ -13246,11 +13258,10 @@ createNode parentConstraint -n "minileft1_parentConstraint1" -p "minileft3";
 	setAttr ".tg[0].tr" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].tor" -type "double3" 90 0 0 ;
 	setAttr ".tg[0].ts" -type "double3" 0.10287317374084579 0.026750892989046534 0.10287317374084579 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 90 0 90 ;
 	setAttr ".rst" -type "double3" 0.28783246350890213 0.8635082290848165 1.4561055924537871 ;
 	setAttr ".rsrr" -type "double3" 90 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "minileft3_parentConstraint1" -p "minileft3";
 	rename -uid "D06EA6EF-4609-D3F6-4066-14B0F2AF59EF";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "minigunleft3W0" -dv 1 -min 0 -at "double";
@@ -13596,11 +13607,10 @@ createNode parentConstraint -n "minigunleft1_parentConstraint1" -p "minigunleft4
 	setAttr ".tg[0].tot" -type "double3" 0.28307042689064982 1.5785242586648458 0.13007766135182619 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].ts" -type "double3" 0.46290858128406609 0.074756333949229314 0.45548358511737569 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 0 0 90 ;
 	setAttr ".rst" -type "double3" 0.28764188118987677 0.82378021538955393 1.2472733751364051 ;
 	setAttr ".rsrr" -type "double3" 0 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "minigunleft2_parentConstraint1" -p "minigunleft4";
 	rename -uid "547CB9D0-49DF-C843-3EF9-A083C7FA3442";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "smallturret2W0" -dv 1 -min 0 -at "double";
@@ -13621,11 +13631,10 @@ createNode parentConstraint -n "minigunleft2_parentConstraint1" -p "minigunleft4
 	setAttr ".tg[0].tot" -type "double3" 0.28307042689065032 1.578524258664844 0.13007766135182663 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].ts" -type "double3" 0.46290858128406609 0.074756333949229314 0.45548358511737569 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 0 0 90 ;
 	setAttr ".rst" -type "double3" -2.4963564414133215 0.8237802153895537 1.2472733751364051 ;
 	setAttr ".rsrr" -type "double3" 0 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "minigunleft4_parentConstraint1" -p "minigunleft4";
 	rename -uid "90BE5C12-4E72-7222-D53D-7F99E3620756";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "smallturret4W0" -dv 1 -min 0 -at "double";
@@ -13991,11 +14000,10 @@ createNode parentConstraint -n "miniright1_parentConstraint1" -p "miniright4";
 	setAttr ".tg[0].tr" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].tor" -type "double3" 90 0 0 ;
 	setAttr ".tg[0].ts" -type "double3" 0.10287317374084579 0.026750892989046534 0.10287317374084579 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 90 0 90 ;
 	setAttr ".rst" -type "double3" 0.089738478629556584 0.86350822908481617 1.4561055924537871 ;
 	setAttr ".rsrr" -type "double3" 90 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "miniright2_parentConstraint1" -p "miniright4";
 	rename -uid "5A92255C-44CE-CB03-5443-2FAAA1716369";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "minigunright2W0" -dv 1 -min 0 -at "double";
@@ -14018,11 +14026,10 @@ createNode parentConstraint -n "miniright2_parentConstraint1" -p "miniright4";
 	setAttr ".tg[0].tr" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].tor" -type "double3" 90 0 0 ;
 	setAttr ".tg[0].ts" -type "double3" 0.10287317374084579 0.026750892989046534 0.10287317374084579 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 90 0 90 ;
 	setAttr ".rst" -type "double3" -2.6942598439736423 0.86350822908481628 1.4561055924537871 ;
 	setAttr ".rsrr" -type "double3" 90 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "miniright4_parentConstraint1" -p "miniright4";
 	rename -uid "6C994A75-483A-E8E0-9818-3994C0345CEF";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "minigunright4W0" -dv 1 -min 0 -at "double";
@@ -14055,7 +14062,7 @@ createNode mesh -n "smallturret4Shape" -p "smallturret4";
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.375 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 90 ".uvst[0].uvsp[0:89]" -type "float2" 0.375 0 0.625 0 0.375
+	setAttr -s 114 ".uvst[0].uvsp[0:113]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
 		 0.875 0.25 0.125 0 0.125 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5
 		 0.625 0.75 0.375 0.75 0.375 0.5 0.375 0.5 0.625 0.5 0.625 0.5 0.625 0.75 0.375 0.75
@@ -14066,7 +14073,10 @@ createNode mesh -n "smallturret4Shape" -p "smallturret4";
 		 0.625 0.5 0.625 0.25 0.625 0.5 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.375 0.5
 		 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.625
 		 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.5 0.625 0.5 0.625 0.25 0.375
-		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25;
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25 0.375
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.5 0.375 0.5 0.375 0.25 0.375
+		 0.5 0.375 0.5 0.375 0.5 0.375 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625
+		 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -14264,17 +14274,17 @@ createNode mesh -n "smallturret4Shape" -p "smallturret4";
 		f 4 -133 143 144 -142
 		mu 0 4 74 75 81 80
 		f 4 134 138 -148 -147
-		mu 0 4 66 67 83 82
+		mu 0 4 90 91 92 93
 		f 4 -137 148 149 -144
-		mu 0 4 68 69 85 84
+		mu 0 4 94 95 96 97
 		f 4 -138 146 150 -149
-		mu 0 4 69 66 82 85
+		mu 0 4 98 99 100 101
 		f 4 -117 151 153 -153
-		mu 0 4 76 72 78 86
+		mu 0 4 102 103 104 105
 		f 4 119 156 -158 -155
-		mu 0 4 75 77 87 81
+		mu 0 4 106 107 108 109
 		f 4 -121 152 158 -157
-		mu 0 4 77 76 86 87
+		mu 0 4 110 111 112 113
 		f 4 -123 159 160 -152
 		mu 0 4 67 70 88 83
 		f 4 124 161 -163 -160
@@ -14294,7 +14304,7 @@ createNode mesh -n "polySurfaceShape2" -p "smallturret4";
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.5 0.625 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 90 ".uvst[0].uvsp[0:89]" -type "float2" 0.375 0 0.625 0 0.375
+	setAttr -s 114 ".uvst[0].uvsp[0:113]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
 		 0.875 0.25 0.125 0 0.125 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5
 		 0.625 0.75 0.375 0.75 0.375 0.5 0.375 0.5 0.625 0.5 0.625 0.5 0.625 0.75 0.375 0.75
@@ -14305,12 +14315,15 @@ createNode mesh -n "polySurfaceShape2" -p "smallturret4";
 		 0.625 0.5 0.625 0.25 0.625 0.5 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.375 0.5
 		 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.625
 		 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.5 0.625 0.5 0.625 0.25 0.375
-		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25;
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.625 0.25 0.625 0.25 0.375 0.25 0.375 0.25 0.375
+		 0.5 0.375 0.25 0.375 0.25 0.375 0.5 0.375 0.25 0.375 0.5 0.375 0.5 0.375 0.25 0.375
+		 0.5 0.375 0.5 0.375 0.5 0.375 0.5 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625
+		 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25 0.625 0.25;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 36 ".pt";
+	setAttr -s 30 ".pt";
 	setAttr ".pt[8]" -type "float3" 0 3.9968029e-15 0.19252348 ;
 	setAttr ".pt[9]" -type "float3" 0 3.9968029e-15 0.19252348 ;
 	setAttr ".pt[54]" -type "float3" 0 3.9968029e-15 0.19252348 ;
@@ -14534,17 +14547,17 @@ createNode mesh -n "polySurfaceShape2" -p "smallturret4";
 		f 4 -133 143 144 -142
 		mu 0 4 74 75 81 80
 		f 4 134 138 -148 -147
-		mu 0 4 66 67 83 82
+		mu 0 4 90 91 92 93
 		f 4 -137 148 149 -144
-		mu 0 4 68 69 85 84
+		mu 0 4 94 95 96 97
 		f 4 -138 146 150 -149
-		mu 0 4 69 66 82 85
+		mu 0 4 98 99 100 101
 		f 4 -117 151 153 -153
-		mu 0 4 76 72 78 86
+		mu 0 4 102 103 104 105
 		f 4 119 156 -158 -155
-		mu 0 4 75 77 87 81
+		mu 0 4 106 107 108 109
 		f 4 -121 152 158 -157
-		mu 0 4 77 76 86 87
+		mu 0 4 110 111 112 113
 		f 4 -123 159 160 -152
 		mu 0 4 67 70 88 83
 		f 4 124 161 -163 -160
@@ -14575,9 +14588,8 @@ createNode parentConstraint -n "smallturret1_parentConstraint1" -p "smallturret4
 	setAttr ".tg[0].tt" -type "double3" 0.18651564262670278 0.63343373375803991 1.2104799481715789 ;
 	setAttr ".tg[0].tot" -type "double3" -0.15121796524977749 1.7658327520235773 -0.1135282124936694 ;
 	setAttr ".tg[0].ts" -type "double3" 0.19779059388114381 0.040967523634899292 0.19779059388114381 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".rst" -type "double3" 0.15660615147445112 0.70577552876184502 1.1880251356001914 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "smallturret2_parentConstraint1" -p "smallturret4";
 	rename -uid "3E8BD839-4F6A-38E0-FA59-6DAABF60E9E1";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "minipivot2W0" -dv 1 -min 0 -at "double";
@@ -14597,9 +14609,8 @@ createNode parentConstraint -n "smallturret2_parentConstraint1" -p "smallturret4
 	setAttr ".tg[0].tt" -type "double3" -2.5974826799764958 0.63343373375803991 1.2104799481715789 ;
 	setAttr ".tg[0].tot" -type "double3" -0.15121796524977782 1.7658327520235773 -0.11352821249367029 ;
 	setAttr ".tg[0].ts" -type "double3" 0.19779059388114381 0.040967523634899292 0.19779059388114381 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".rst" -type "double3" -2.6273921711287476 0.70577552876184502 1.1880251356001912 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "smallturret4_parentConstraint1" -p "smallturret4";
 	rename -uid "C5300F39-448E-87AE-DA56-899D9FA56D73";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "minipivot4W0" -dv 1 -min 0 -at "double";
@@ -14963,11 +14974,10 @@ createNode parentConstraint -n "minileft1_parentConstraint1" -p "minileft4";
 	setAttr ".tg[0].tr" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].tor" -type "double3" 90 0 0 ;
 	setAttr ".tg[0].ts" -type "double3" 0.10287317374084579 0.026750892989046534 0.10287317374084579 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 90 0 90 ;
 	setAttr ".rst" -type "double3" 0.28783246350890213 0.8635082290848165 1.4561055924537871 ;
 	setAttr ".rsrr" -type "double3" 90 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "minileft2_parentConstraint1" -p "minileft4";
 	rename -uid "D0BAE13F-4A87-C377-4609-F0998CD75262";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "minigunleft2W0" -dv 1 -min 0 -at "double";
@@ -14989,11 +14999,10 @@ createNode parentConstraint -n "minileft2_parentConstraint1" -p "minileft4";
 	setAttr ".tg[0].tr" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].tor" -type "double3" 90 0 0 ;
 	setAttr ".tg[0].ts" -type "double3" 0.10287317374084579 0.026750892989046534 0.10287317374084579 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 90 0 90 ;
 	setAttr ".rst" -type "double3" -2.4961658590942966 0.86350822908481684 1.4561055924537871 ;
 	setAttr ".rsrr" -type "double3" 90 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "minileft4_parentConstraint1" -p "minileft4";
 	rename -uid "8FEC1DA1-40FF-EDF5-7056-96ACFB7A415C";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "minigunleft4W0" -dv 1 -min 0 -at "double";
@@ -15138,11 +15147,10 @@ createNode parentConstraint -n "minigunright1_parentConstraint1" -p "minigunrigh
 	setAttr ".tg[0].tot" -type "double3" -0.14445114121542033 1.5785242586648458 0.13007766135182619 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].ts" -type "double3" 0.46290858128406609 0.074756333949229314 0.45548358511737569 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 0 0 90 ;
 	setAttr ".rst" -type "double3" 0.089738478629556612 0.82378021538955393 1.2472733751364051 ;
 	setAttr ".rsrr" -type "double3" 0 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "minigunright2_parentConstraint1" -p "minigunright4";
 	rename -uid "72E9CBF2-4DF3-69DD-341F-6497796DEDFF";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "smallturret2W0" -dv 1 -min 0 -at "double";
@@ -15163,11 +15171,10 @@ createNode parentConstraint -n "minigunright2_parentConstraint1" -p "minigunrigh
 	setAttr ".tg[0].tot" -type "double3" -0.14445114121541902 1.578524258664844 0.13007766135182663 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 90 ;
 	setAttr ".tg[0].ts" -type "double3" 0.46290858128406609 0.074756333949229314 0.45548358511737569 ;
-	setAttr ".cpim" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".cpim" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".lr" -type "double3" 0 0 90 ;
 	setAttr ".rst" -type "double3" -2.6942598439736414 0.8237802153895537 1.2472733751364051 ;
 	setAttr ".rsrr" -type "double3" 0 0 90 ;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "minigunright4_parentConstraint1" -p "minigunright4";
 	rename -uid "916259AD-46F2-0E0E-2441-9784426BF047";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "smallturret4W0" -dv 1 -min 0 -at "double";
@@ -15189,20 +15196,233 @@ createNode parentConstraint -n "minigunright4_parentConstraint1" -p "minigunrigh
 	setAttr ".rst" -type "double3" -2.6942598439736409 0.82378021538955359 1.2472733751364051 ;
 	setAttr ".rsrr" -type "double3" 0 0 90 ;
 	setAttr -k on ".w0";
+createNode transform -n "Superstructure2";
+	rename -uid "96E80ADF-4FE9-7008-AA7D-8B97CA05B40A";
+	setAttr ".rp" -type "double3" 0.91462766268723095 0.70326421817610907 0 ;
+	setAttr ".sp" -type "double3" 0.91462766268723095 0.70326421817610907 0 ;
+createNode mesh -n "Superstructure2" -p "|Superstructure2";
+	rename -uid "8540B6CA-4AE4-29FB-9B10-9F952F07F942";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.25 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 70 ".uvst[0].uvsp[0:69]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0 0.875 0 0.875 0.25 0.625 0.25 0.625 0 0.875
+		 0 0.875 0.25 0.625 0.25 0.625 0 0.875 0 0.875 0.25 0.625 0.25 0.125 0 0.375 0 0.375
+		 0.25 0.125 0.25 0.125 0 0.375 0 0.375 0.25 0.125 0.25 0.125 0 0.375 0 0.375 0.25
+		 0.125 0.25 0.125 0 0.375 0 0.375 0.25 0.125 0.25 0.125 0 0.375 0 0.375 0.25 0.125
+		 0.25 0.125 0 0.375 0 0.375 0.25 0.125 0.25 0.125 0 0.375 0 0.375 0.25 0.125 0.25
+		 0.125 0 0.375 0 0.375 0.25 0.125 0.25 0.125 0 0.375 0 0.375 0.25 0.125 0.25 0.125
+		 0 0.375 0 0.375 0.25 0.125 0.25 0.125 0 0.375 0 0.375 0.25 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 64 ".pt[0:63]" -type "float3"  0.95165461 1.0592659 0.4041225 
+		0.81124383 1.0592659 0.4041225 0.95165461 0.34726197 0.4041225 0.81124383 0.34726197 
+		0.4041225 0.95165461 0.34726197 -0.4041225 0.81124383 0.34726197 -0.4041225 0.95165461 
+		1.0592659 -0.4041225 0.81124383 1.0592659 -0.4041225 0.81124383 1.0592659 -0.34382188 
+		0.81124383 1.0592659 0.34382188 0.81124383 0.34726197 -0.34382188 0.81124383 0.34726197 
+		0.34382188 0.76327205 1.0592659 -0.34382188 0.76327205 1.0592659 0.34382188 0.76327205 
+		0.34726197 -0.34382188 0.76327205 0.34726197 0.34382188 0.59904331 1.0592659 -0.14592379 
+		0.59904331 1.0592659 0.14592379 0.59904331 0.34726197 -0.14592379 0.59904331 0.34726197 
+		0.14592379 1.0051013 1.0592659 -0.32468185 1.0051013 1.0592659 0.32468185 1.0051013 
+		0.34726197 0.32468185 1.0051013 0.34726197 -0.32468185 1.2149438 1.0592659 -0.32468185 
+		1.2149438 1.0592659 0.32468185 1.2149438 0.34726197 0.32468185 1.2149438 0.34726197 
+		-0.32468185 1.2149438 1.0592659 -0.43290919 1.2149438 1.0592659 0.43290919 1.2149438 
+		0.34726197 0.43290919 1.2149438 0.34726197 -0.43290919 1.3241681 1.0592659 -0.43290919 
+		1.3241681 1.0592659 0.43290919 1.3241681 0.34726197 0.43290919 1.3241681 0.34726197 
+		-0.43290919 1.3241681 1.0592659 -0.4602021 1.3241681 1.0592659 0.4602021 1.3241681 
+		0.34726197 0.4602021 1.3241681 0.34726197 -0.4602021 1.4798074 1.0592659 -0.4602021 
+		1.4798074 1.0592659 0.4602021 1.4798074 0.34726197 0.4602021 1.4798074 0.34726197 
+		-0.4602021 1.4798074 1.0592659 -0.35475978 1.4798074 1.0592659 0.35475978 1.4798074 
+		0.34726197 0.35475978 1.4798074 0.34726197 -0.35475978 1.7510403 1.0592659 -0.35475978 
+		1.7510403 1.0592659 0.35475978 1.7510403 0.34726197 0.35475978 1.7510403 0.34726197 
+		-0.35475978 1.7510403 1.0592659 -0.39185762 1.7510403 1.0592659 0.39185762 1.7510403 
+		0.34726197 0.39185762 1.7510403 0.34726197 -0.39185762 1.7844446 1.0592659 -0.39265993 
+		1.7844446 1.0592659 0.39265993 1.7844446 0.34726197 0.39265993 1.7844446 0.34726197 
+		-0.39265993 0.29509819 1.0592659 0.19335264 0.29509819 1.0592659 -0.19335264 0.29509819 
+		0.34726197 -0.19335264 0.29509819 0.34726197 0.19335264;
+	setAttr -s 64 ".vt[0:63]"  -0.22038406 -0.49999952 0.5 0.61533952 -0.49999952 0.5
+		 -0.22038406 0.50000048 0.5 0.61533952 0.50000048 0.5 -0.22038406 0.50000048 -0.5
+		 0.61533952 0.50000048 -0.5 -0.22038406 -0.49999952 -0.5 0.61533952 -0.49999952 -0.5
+		 0.61533952 -0.49999952 -0.42539313 0.61533952 -0.49999952 0.42539313 0.61533952 0.50000048 -0.42539313
+		 0.61533952 0.50000048 0.42539313 0.90086687 -0.49999952 -0.42539313 0.90086687 -0.49999952 0.42539313
+		 0.90086687 0.50000048 -0.42539313 0.90086687 0.50000048 0.42539313 1.87835467 -0.49999952 -0.180544
+		 1.87835467 -0.49999952 0.180544 1.87835467 0.50000048 -0.180544 1.87835467 0.50000048 0.180544
+		 -0.5384984 -0.49999952 -0.40171218 -0.5384984 -0.49999952 0.40171218 -0.5384984 0.50000048 0.40171218
+		 -0.5384984 0.50000048 -0.40171218 -1.78747845 -0.49999952 -0.40171218 -1.78747845 -0.49999952 0.40171218
+		 -1.78747845 0.50000048 0.40171218 -1.78747845 0.50000048 -0.40171218 -1.78747845 -0.49999952 -0.53561628
+		 -1.78747845 -0.49999952 0.53561628 -1.78747845 0.50000048 0.53561628 -1.78747845 0.50000048 -0.53561628
+		 -2.43758011 -0.49999952 -0.53561628 -2.43758011 -0.49999952 0.53561628 -2.43758011 0.50000048 0.53561628
+		 -2.43758011 0.50000048 -0.53561628 -2.43758011 -0.49999952 -0.5693844 -2.43758011 -0.49999952 0.5693844
+		 -2.43758011 0.50000048 0.5693844 -2.43758011 0.50000048 -0.5693844 -3.3639431 -0.49999952 -0.5693844
+		 -3.3639431 -0.49999952 0.5693844 -3.3639431 0.50000048 0.5693844 -3.3639431 0.50000048 -0.5693844
+		 -3.3639431 -0.49999952 -0.43892604 -3.3639431 -0.49999952 0.43892604 -3.3639431 0.50000048 0.43892604
+		 -3.3639431 0.50000048 -0.43892604 -4.97831917 -0.49999952 -0.43892604 -4.97831917 -0.49999952 0.43892604
+		 -4.97831917 0.50000048 0.43892604 -4.97831917 0.50000048 -0.43892604 -4.97831917 -0.49999952 -0.55210751
+		 -4.97831917 -0.49999952 0.55210751 -4.97831917 0.50000048 0.55210751 -4.97831917 0.50000048 -0.55210751
+		 -5.99172068 -0.49999952 -0.55210751 -5.99172068 -0.49999952 0.55210751 -5.99172068 0.50000048 0.55210751
+		 -5.99172068 0.50000048 -0.55210751 -5.99172068 -0.49999952 -0.55210751 -5.99172068 -0.49999952 0.55210751
+		 -5.99172068 0.50000048 0.55210751 -5.99172068 0.50000048 -0.55210751;
+	setAttr -s 124 ".ed[0:123]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0 7 8 0 1 9 0 8 9 0 5 10 0 10 8 0 3 11 0 11 10 0 9 11 0
+		 8 12 0 9 13 0 12 13 0 10 14 0 14 12 0 11 15 0 15 14 0 13 15 0 12 16 0 13 17 0 16 17 0
+		 14 18 0 18 16 0 15 19 0 19 18 0 17 19 0 6 20 0 0 21 0 20 21 0 2 22 0 21 22 0 4 23 0
+		 22 23 0 23 20 0 20 24 0 21 25 0 24 25 0 22 26 0 25 26 0 23 27 0 26 27 0 27 24 0 24 28 0
+		 25 29 0 28 29 0 26 30 0 29 30 0 27 31 0 30 31 0 31 28 0 28 32 0 29 33 0 32 33 0 30 34 0
+		 33 34 0 31 35 0 34 35 0 35 32 0 32 36 0 33 37 0 36 37 0 34 38 0 37 38 0 35 39 0 38 39 0
+		 39 36 0 36 40 0 37 41 0 40 41 0 38 42 0 41 42 0 39 43 0 42 43 0 43 40 0 40 44 0 41 45 0
+		 44 45 0 42 46 0 45 46 0 43 47 0 46 47 0 47 44 0 44 48 0 45 49 0 48 49 0 46 50 0 49 50 0
+		 47 51 0 50 51 0 51 48 0 48 52 0 49 53 0 52 53 0 50 54 0 53 54 0 51 55 0 54 55 0 55 52 0
+		 52 56 0 53 57 0 56 57 0 54 58 0 57 58 0 55 59 0 58 59 0 59 56 0 56 60 0 57 61 0 60 61 0
+		 58 62 0 61 62 0 59 63 0 62 63 0 63 60 0;
+	setAttr -s 62 -ch 248 ".fc[0:61]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -31 -33 -35 -36
+		mu 0 4 22 23 24 25
+		f 4 118 120 122 123
+		mu 0 4 66 67 68 69
+		f 4 -12 12 14 -14
+		mu 0 4 1 10 15 14
+		f 4 -10 15 16 -13
+		mu 0 4 10 11 16 15
+		f 4 -8 17 18 -16
+		mu 0 4 11 3 17 16
+		f 4 -6 13 19 -18
+		mu 0 4 3 1 14 17
+		f 4 -15 20 22 -22
+		mu 0 4 14 15 19 18
+		f 4 -17 23 24 -21
+		mu 0 4 15 16 20 19
+		f 4 -19 25 26 -24
+		mu 0 4 16 17 21 20
+		f 4 -20 21 27 -26
+		mu 0 4 17 14 18 21
+		f 4 -23 28 30 -30
+		mu 0 4 18 19 23 22
+		f 4 -25 31 32 -29
+		mu 0 4 19 20 24 23
+		f 4 -27 33 34 -32
+		mu 0 4 20 21 25 24
+		f 4 -28 29 35 -34
+		mu 0 4 21 18 22 25
+		f 4 10 37 -39 -37
+		mu 0 4 12 0 27 26
+		f 4 4 39 -41 -38
+		mu 0 4 0 2 28 27
+		f 4 6 41 -43 -40
+		mu 0 4 2 13 29 28
+		f 4 8 36 -44 -42
+		mu 0 4 13 12 26 29
+		f 4 38 45 -47 -45
+		mu 0 4 26 27 31 30
+		f 4 40 47 -49 -46
+		mu 0 4 27 28 32 31
+		f 4 42 49 -51 -48
+		mu 0 4 28 29 33 32
+		f 4 43 44 -52 -50
+		mu 0 4 29 26 30 33
+		f 4 46 53 -55 -53
+		mu 0 4 30 31 35 34
+		f 4 48 55 -57 -54
+		mu 0 4 31 32 36 35
+		f 4 50 57 -59 -56
+		mu 0 4 32 33 37 36
+		f 4 51 52 -60 -58
+		mu 0 4 33 30 34 37
+		f 4 54 61 -63 -61
+		mu 0 4 34 35 39 38
+		f 4 56 63 -65 -62
+		mu 0 4 35 36 40 39
+		f 4 58 65 -67 -64
+		mu 0 4 36 37 41 40
+		f 4 59 60 -68 -66
+		mu 0 4 37 34 38 41
+		f 4 62 69 -71 -69
+		mu 0 4 38 39 43 42
+		f 4 64 71 -73 -70
+		mu 0 4 39 40 44 43
+		f 4 66 73 -75 -72
+		mu 0 4 40 41 45 44
+		f 4 67 68 -76 -74
+		mu 0 4 41 38 42 45
+		f 4 70 77 -79 -77
+		mu 0 4 42 43 47 46
+		f 4 72 79 -81 -78
+		mu 0 4 43 44 48 47
+		f 4 74 81 -83 -80
+		mu 0 4 44 45 49 48
+		f 4 75 76 -84 -82
+		mu 0 4 45 42 46 49
+		f 4 78 85 -87 -85
+		mu 0 4 46 47 51 50
+		f 4 80 87 -89 -86
+		mu 0 4 47 48 52 51
+		f 4 82 89 -91 -88
+		mu 0 4 48 49 53 52
+		f 4 83 84 -92 -90
+		mu 0 4 49 46 50 53
+		f 4 86 93 -95 -93
+		mu 0 4 50 51 55 54
+		f 4 88 95 -97 -94
+		mu 0 4 51 52 56 55
+		f 4 90 97 -99 -96
+		mu 0 4 52 53 57 56
+		f 4 91 92 -100 -98
+		mu 0 4 53 50 54 57
+		f 4 94 101 -103 -101
+		mu 0 4 54 55 59 58
+		f 4 96 103 -105 -102
+		mu 0 4 55 56 60 59
+		f 4 98 105 -107 -104
+		mu 0 4 56 57 61 60
+		f 4 99 100 -108 -106
+		mu 0 4 57 54 58 61
+		f 4 102 109 -111 -109
+		mu 0 4 58 59 63 62
+		f 4 104 111 -113 -110
+		mu 0 4 59 60 64 63
+		f 4 106 113 -115 -112
+		mu 0 4 60 61 65 64
+		f 4 107 108 -116 -114
+		mu 0 4 61 58 62 65
+		f 4 110 117 -119 -117
+		mu 0 4 62 63 67 66
+		f 4 112 119 -121 -118
+		mu 0 4 63 64 68 67
+		f 4 114 121 -123 -120
+		mu 0 4 64 65 69 68
+		f 4 115 116 -124 -122
+		mu 0 4 65 62 66 69;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "11731126-42D3-3D1B-BCEC-BFB35C2A0DA8";
+	rename -uid "3DCD34E4-46DE-0126-6395-6282A4B2321B";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "CCCFC737-4FF6-4068-A242-698F63FD87CE";
+	rename -uid "3B4C410A-4347-F332-BE92-DA9359664D5E";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "5EFD72AC-4F04-2A80-975C-DEBAD893E662";
+	rename -uid "502FE5D7-4786-7F1F-C4C5-5F87DC235CF9";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "C30DE663-4DF4-B23F-5A51-DB938ABF4A8C";
+	rename -uid "E0331B28-4C98-7FEF-0DDD-9288247F4FE4";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "63CE172D-4D3D-A863-A407-2E82577A5510";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "288A19E2-4ADC-FBED-83F6-73920726D0C4";
+	rename -uid "134D0510-4C6D-A61C-44CC-21B964F8FD47";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3A68E8C5-4B0A-F0C5-D005-798706D1BEA7";
 	setAttr ".g" yes;
@@ -15302,7 +15522,7 @@ select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
 select -ne :initialShadingGroup;
-	setAttr -s 55 ".dsm";
+	setAttr -s 56 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -16218,12 +16438,12 @@ connectAttr "minigunleft4.s" "minileft4_parentConstraint1.tg[0].ts";
 connectAttr "minigunleft4.pm" "minileft4_parentConstraint1.tg[0].tpm";
 connectAttr "minileft4_parentConstraint1.w0" "minileft4_parentConstraint1.tg[0].tw"
 		;
+connectAttr "minigunright4_parentConstraint1.cry" "minigunright4.ry";
+connectAttr "minigunright4_parentConstraint1.crx" "minigunright4.rx";
+connectAttr "minigunright4_parentConstraint1.crz" "minigunright4.rz";
 connectAttr "minigunright4_parentConstraint1.ctx" "minigunright4.tx";
 connectAttr "minigunright4_parentConstraint1.cty" "minigunright4.ty";
 connectAttr "minigunright4_parentConstraint1.ctz" "minigunright4.tz";
-connectAttr "minigunright4_parentConstraint1.crx" "minigunright4.rx";
-connectAttr "minigunright4_parentConstraint1.cry" "minigunright4.ry";
-connectAttr "minigunright4_parentConstraint1.crz" "minigunright4.rz";
 connectAttr "minigunright4.ro" "minigunright4_parentConstraint1.cro";
 connectAttr "minigunright4.pim" "minigunright4_parentConstraint1.cpim";
 connectAttr "minigunright4.rp" "minigunright4_parentConstraint1.crp";
@@ -16338,4 +16558,6 @@ connectAttr "|miniright4|smallgunpivot.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "smallturret4Shape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "|minileft4|smallgunpivot.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "|minigunright4|smallgunpivot.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "|Superstructure2|Superstructure2.iog" ":initialShadingGroup.dsm" -na
+		;
 // End of Battleship.ma
